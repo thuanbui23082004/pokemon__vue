@@ -16,11 +16,11 @@ function getIDPokemon(url) {
 const pokemons = ref([]);
 const filteredPokemons = ref([]);
 const offset = ref(0);
-const NUMBER_OF_RENDER = 6;
+const NUMBER_OF_RENDER = 20;
 
 async function getPokemon() {
   const data = await fetchAPI("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=898");
-  pokemons.value = data.results.map((item) => ({
+  pokemons.valunpe = data.results.map((item) => ({
     id: getIDPokemon(item.url),
     name: item.name,
   }));
